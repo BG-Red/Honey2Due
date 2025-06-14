@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEBCA2AD2DFDDC1200C74827 /* AppDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCA2AB2DFDDC0900C74827 /* AppDataStore.swift */; };
+		CEBCA2B02DFDDCAD00C74827 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCA2AF2DFDDCAB00C74827 /* Task.swift */; };
+		CEBCA2B22DFDDCD100C74827 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCA2B12DFDDCCE00C74827 /* Quote.swift */; };
+		CEBCA2B42DFDDCF800C74827 /* TaskUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCA2B32DFDDCF100C74827 /* TaskUpdate.swift */; };
+		CEBCA2B62DFDDD1900C74827 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCA2B52DFDDD1700C74827 /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEBCA28D2DFDD9B600C74827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEBCA2752DFDD9B400C74827 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEBCA27C2DFDD9B400C74827;
+			remoteInfo = "Honey's 2 Due List";
+		};
+		CEBCA2972DFDD9B600C74827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEBCA2752DFDD9B400C74827 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEBCA27C2DFDD9B400C74827;
+			remoteInfo = "Honey's 2 Due List";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEBCA27D2DFDD9B400C74827 /* Honey's 2 Due List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Honey's 2 Due List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBCA28C2DFDD9B600C74827 /* Honey's 2 Due ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Honey's 2 Due ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBCA2962DFDD9B600C74827 /* Honey's 2 Due ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Honey's 2 Due ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBCA2AA2DFDDA9A00C74827 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		CEBCA2AB2DFDDC0900C74827 /* AppDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataStore.swift; sourceTree = "<group>"; };
+		CEBCA2AF2DFDDCAB00C74827 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CEBCA2B12DFDDCCE00C74827 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		CEBCA2B32DFDDCF100C74827 /* TaskUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUpdate.swift; sourceTree = "<group>"; };
+		CEBCA2B52DFDDD1700C74827 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEBCA2B82DFDDDD400C74827 /* SubmittedTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedTaskView.swift; sourceTree = "<group>"; };
+		CEBCA2B92DFDDDF900C74827 /* TasksNeedingQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksNeedingQuoteView.swift; sourceTree = "<group>"; };
+		CEBCA2BA2DFDDE1A00C74827 /* AssignedTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignedTaskView.swift; sourceTree = "<group>"; };
+		CEBCA2BB2DFDDE3700C74827 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		CEBCA2BC2DFDDE4D00C74827 /* CreateQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuoteView.swift; sourceTree = "<group>"; };
+		CEBCA2BE2DFDDE7100C74827 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CEBCA27F2DFDD9B400C74827 /* Honey's 2 Due List */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Honey's 2 Due List";
+			sourceTree = "<group>";
+		};
+		CEBCA28F2DFDD9B600C74827 /* Honey's 2 Due ListTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Honey's 2 Due ListTests";
+			sourceTree = "<group>";
+		};
+		CEBCA2992DFDD9B600C74827 /* Honey's 2 Due ListUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Honey's 2 Due ListUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEBCA27A2DFDD9B400C74827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBCA2892DFDD9B600C74827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBCA2932DFDD9B600C74827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEBCA2742DFDD9B400C74827 = {
+			isa = PBXGroup;
+			children = (
+				CEBCA2B72DFDDDCF00C74827 /* Views */,
+				CEBCA2AE2DFDDC4300C74827 /* Managers */,
+				CEBCA2A92DFDDA8100C74827 /* Models */,
+				CEBCA27F2DFDD9B400C74827 /* Honey's 2 Due List */,
+				CEBCA28F2DFDD9B600C74827 /* Honey's 2 Due ListTests */,
+				CEBCA2992DFDD9B600C74827 /* Honey's 2 Due ListUITests */,
+				CEBCA27E2DFDD9B400C74827 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEBCA27E2DFDD9B400C74827 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCA27D2DFDD9B400C74827 /* Honey's 2 Due List.app */,
+				CEBCA28C2DFDD9B600C74827 /* Honey's 2 Due ListTests.xctest */,
+				CEBCA2962DFDD9B600C74827 /* Honey's 2 Due ListUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEBCA2A92DFDDA8100C74827 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCA2B52DFDDD1700C74827 /* User.swift */,
+				CEBCA2B32DFDDCF100C74827 /* TaskUpdate.swift */,
+				CEBCA2B12DFDDCCE00C74827 /* Quote.swift */,
+				CEBCA2AA2DFDDA9A00C74827 /* Enums.swift */,
+				CEBCA2AF2DFDDCAB00C74827 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEBCA2AE2DFDDC4300C74827 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCA2AB2DFDDC0900C74827 /* AppDataStore.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CEBCA2B72DFDDDCF00C74827 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCA2BE2DFDDE7100C74827 /* TaskDetailView.swift */,
+				CEBCA2BC2DFDDE4D00C74827 /* CreateQuoteView.swift */,
+				CEBCA2BB2DFDDE3700C74827 /* NewTaskView.swift */,
+				CEBCA2BA2DFDDE1A00C74827 /* AssignedTaskView.swift */,
+				CEBCA2B92DFDDDF900C74827 /* TasksNeedingQuoteView.swift */,
+				CEBCA2B82DFDDDD400C74827 /* SubmittedTaskView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEBCA27C2DFDD9B400C74827 /* Honey's 2 Due List */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEBCA2A02DFDD9B600C74827 /* Build configuration list for PBXNativeTarget "Honey's 2 Due List" */;
+			buildPhases = (
+				CEBCA2792DFDD9B400C74827 /* Sources */,
+				CEBCA27A2DFDD9B400C74827 /* Frameworks */,
+				CEBCA27B2DFDD9B400C74827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CEBCA27F2DFDD9B400C74827 /* Honey's 2 Due List */,
+			);
+			name = "Honey's 2 Due List";
+			packageProductDependencies = (
+			);
+			productName = "Honey's 2 Due List";
+			productReference = CEBCA27D2DFDD9B400C74827 /* Honey's 2 Due List.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEBCA28B2DFDD9B600C74827 /* Honey's 2 Due ListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEBCA2A32DFDD9B600C74827 /* Build configuration list for PBXNativeTarget "Honey's 2 Due ListTests" */;
+			buildPhases = (
+				CEBCA2882DFDD9B600C74827 /* Sources */,
+				CEBCA2892DFDD9B600C74827 /* Frameworks */,
+				CEBCA28A2DFDD9B600C74827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEBCA28E2DFDD9B600C74827 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CEBCA28F2DFDD9B600C74827 /* Honey's 2 Due ListTests */,
+			);
+			name = "Honey's 2 Due ListTests";
+			packageProductDependencies = (
+			);
+			productName = "Honey's 2 Due ListTests";
+			productReference = CEBCA28C2DFDD9B600C74827 /* Honey's 2 Due ListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEBCA2952DFDD9B600C74827 /* Honey's 2 Due ListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEBCA2A62DFDD9B600C74827 /* Build configuration list for PBXNativeTarget "Honey's 2 Due ListUITests" */;
+			buildPhases = (
+				CEBCA2922DFDD9B600C74827 /* Sources */,
+				CEBCA2932DFDD9B600C74827 /* Frameworks */,
+				CEBCA2942DFDD9B600C74827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEBCA2982DFDD9B600C74827 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CEBCA2992DFDD9B600C74827 /* Honey's 2 Due ListUITests */,
+			);
+			name = "Honey's 2 Due ListUITests";
+			packageProductDependencies = (
+			);
+			productName = "Honey's 2 Due ListUITests";
+			productReference = CEBCA2962DFDD9B600C74827 /* Honey's 2 Due ListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEBCA2752DFDD9B400C74827 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					CEBCA27C2DFDD9B400C74827 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					CEBCA28B2DFDD9B600C74827 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = CEBCA27C2DFDD9B400C74827;
+					};
+					CEBCA2952DFDD9B600C74827 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = CEBCA27C2DFDD9B400C74827;
+					};
+				};
+			};
+			buildConfigurationList = CEBCA2782DFDD9B400C74827 /* Build configuration list for PBXProject "Honey's 2 Due List" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEBCA2742DFDD9B400C74827;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CEBCA27E2DFDD9B400C74827 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEBCA27C2DFDD9B400C74827 /* Honey's 2 Due List */,
+				CEBCA28B2DFDD9B600C74827 /* Honey's 2 Due ListTests */,
+				CEBCA2952DFDD9B600C74827 /* Honey's 2 Due ListUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEBCA27B2DFDD9B400C74827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBCA28A2DFDD9B600C74827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBCA2942DFDD9B600C74827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEBCA2792DFDD9B400C74827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBCA2B62DFDDD1900C74827 /* User.swift in Sources */,
+				CEBCA2AD2DFDDC1200C74827 /* AppDataStore.swift in Sources */,
+				CEBCA2B22DFDDCD100C74827 /* Quote.swift in Sources */,
+				CEBCA2B42DFDDCF800C74827 /* TaskUpdate.swift in Sources */,
+				CEBCA2B02DFDDCAD00C74827 /* Task.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBCA2882DFDD9B600C74827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBCA2922DFDD9B600C74827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEBCA28E2DFDD9B600C74827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEBCA27C2DFDD9B400C74827 /* Honey's 2 Due List */;
+			targetProxy = CEBCA28D2DFDD9B600C74827 /* PBXContainerItemProxy */;
+		};
+		CEBCA2982DFDD9B600C74827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEBCA27C2DFDD9B400C74827 /* Honey's 2 Due List */;
+			targetProxy = CEBCA2972DFDD9B600C74827 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEBCA29E2DFDD9B600C74827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEBCA29F2DFDD9B600C74827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEBCA2A12DFDD9B600C74827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlowDevs.Honey-s-2-Due-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEBCA2A22DFDD9B600C74827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlowDevs.Honey-s-2-Due-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEBCA2A42DFDD9B600C74827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlowDevs.Honey-s-2-Due-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Honey's 2 Due List.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Honey's 2 Due List";
+			};
+			name = Debug;
+		};
+		CEBCA2A52DFDD9B600C74827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlowDevs.Honey-s-2-Due-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Honey's 2 Due List.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Honey's 2 Due List";
+			};
+			name = Release;
+		};
+		CEBCA2A72DFDD9B600C74827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlowDevs.Honey-s-2-Due-ListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Honey's 2 Due List";
+			};
+			name = Debug;
+		};
+		CEBCA2A82DFDD9B600C74827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlowDevs.Honey-s-2-Due-ListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Honey's 2 Due List";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEBCA2782DFDD9B400C74827 /* Build configuration list for PBXProject "Honey's 2 Due List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBCA29E2DFDD9B600C74827 /* Debug */,
+				CEBCA29F2DFDD9B600C74827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEBCA2A02DFDD9B600C74827 /* Build configuration list for PBXNativeTarget "Honey's 2 Due List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBCA2A12DFDD9B600C74827 /* Debug */,
+				CEBCA2A22DFDD9B600C74827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEBCA2A32DFDD9B600C74827 /* Build configuration list for PBXNativeTarget "Honey's 2 Due ListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBCA2A42DFDD9B600C74827 /* Debug */,
+				CEBCA2A52DFDD9B600C74827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEBCA2A62DFDD9B600C74827 /* Build configuration list for PBXNativeTarget "Honey's 2 Due ListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBCA2A72DFDD9B600C74827 /* Debug */,
+				CEBCA2A82DFDD9B600C74827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEBCA2752DFDD9B400C74827 /* Project object */;
+}
