@@ -6,17 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SubmittedTaskView: View {
     @EnvironmentObject var appDataStore: AppDataStore
+    
+    // Query that fetches tasks and filters them by the current user's ID.
+    // It automatically updates when data changes.
+    @Query private var tasks: [Task]
 
     var body: some View {
         NavigationView {
             List {
-                // Filter tasks to show only those submitted by the current user
-                ForEach(appDataStore.tasks.filter { $0.submittedByUserId == appDataStore.currentUser.id }) { task in
+                // Filter the results in-memory
+                ForEach(tasks.filter { $0.submittedByUserId == appDataStore.currentUser.id }) { task in
                     NavigationLink {
-                        // Tapping on a task navigates to its detail view
                         TaskDetailView(task: task)
                     } label: {
                         VStack(alignment: .leading) {
@@ -34,14 +38,7 @@ struct SubmittedTaskView: View {
                     }
                 }
             }
-            .navigationTitle("My Requests") // Title for this navigation stack
+            .navigationTitle("My Requests")
         }
     }
-}
-
-// MARK: - Preview
-// This code block allows you to see a preview of this view in Xcode's canvas
-#Preview {
-    SubmittedTaskView()
-        .environmentObject(AppDataStore()) // Provide a dummy AppDataStore for the preview
 }

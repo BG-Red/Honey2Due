@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import SwiftData
 
-struct TaskUpdate: Identifiable, Codable, Equatable {
-    let id: UUID
-    let taskId: UUID
-    let userId: UUID // The person who posted the update
-    let timestamp: Date
+@Model
+final class TaskUpdate {
+    @Attribute(.unique) var id: UUID
+    var taskId: UUID
+    var userId: UUID // The person who posted the update
+    var timestamp: Date
     var message: String
+    
+    var task: Task? // Inverse relationship
 
     init(id: UUID = UUID(), taskId: UUID, userId: UUID, timestamp: Date = Date(), message: String) {
         self.id = id
@@ -22,4 +26,3 @@ struct TaskUpdate: Identifiable, Codable, Equatable {
         self.message = message
     }
 }
-

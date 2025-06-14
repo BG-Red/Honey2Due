@@ -6,57 +6,55 @@
 //
 
 import Foundation
+import SwiftData
 
-// Note: TaskStatus enum is now typically in Enums.swift
-// Make sure TaskStatus and Priority are accessible (e.g., from Enums.swift if you've put them there)
-
-struct Task: Identifiable, Codable, Equatable { // <--- Add Equatable here
-    let id: UUID
+@Model
+final class Task {
+    @Attribute(.unique) var id: UUID
     var title: String
-    var description: String
-    let submittedByUserId: UUID
+    var details: String // Renamed from 'description'
+    var submittedByUserId: UUID
     var assignedToUserId: UUID?
     var status: TaskStatus
-    let createdAt: Date
+    var createdAt: Date
     var updatedAt: Date
-    var updates: [TaskUpdate]
-    var currentQuote: Quote?
-
+    
     // New properties for the task request:
     var requestedStartDate: Date?
     var completionDate: Date?
     var priority: Priority
     var requestedReward: String?
+
+    @Relationship(deleteRule: .cascade, inverse: \TaskUpdate.task)
+    var updates: [TaskUpdate] = []
+    
+    @Relationship(deleteRule: .cascade, inverse: \Quote.task)
+    var currentQuote: Quote?
     
     init(id: UUID = UUID(),
          title: String,
-         description: String,
+         details: String, // Renamed from 'description'
          submittedByUserId: UUID,
          assignedToUserId: UUID? = nil,
          status: TaskStatus = .pendingQuote,
          createdAt: Date = Date(),
          updatedAt: Date = Date(),
-         updates: [TaskUpdate] = [],
-         currentQuote: Quote? = nil,
-         requestedStartDate: Date? = nil, // <--- NEW in init
-         completionDate: Date? = nil,     // <--- NEW in init
-         priority: Priority = .medium,    // <--- NEW in init, with a default
-         requestedReward: String? = nil   // <--- NEW in init
+         requestedStartDate: Date? = nil,
+         completionDate: Date? = nil,
+         priority: Priority = .medium,
+         requestedReward: String? = nil
     ) {
         self.id = id
         self.title = title
-        self.description = description
+        self.details = details // Renamed from 'description'
         self.submittedByUserId = submittedByUserId
         self.assignedToUserId = assignedToUserId
         self.status = status
         self.createdAt = createdAt
         self.updatedAt = updatedAt
-        self.updates = updates
-        self.currentQuote = currentQuote
-        self.requestedStartDate = requestedStartDate // <--- Assign new properties
+        self.requestedStartDate = requestedStartDate
         self.completionDate = completionDate
         self.priority = priority
         self.requestedReward = requestedReward
     }
 }
-
