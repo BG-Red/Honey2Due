@@ -23,7 +23,7 @@ struct ContentView: View {
 
             TabView {
                 // Submitted Tasks (Person A's view)
-                SubmittedTasksView()
+                SubmittedTaskView()
                     .tabItem {
                         Label("My Requests", systemImage: "paperplane.fill")
                     }
@@ -35,7 +35,7 @@ struct ContentView: View {
                     }
 
                 // Assigned Tasks (Both can see, but specific to who it's assigned to)
-                AssignedTasksView()
+                AssignedTaskView()
                     .tabItem {
                         Label("Assigned", systemImage: "checklist.checked")
                     }
