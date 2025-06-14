@@ -27,14 +27,14 @@ struct CreateQuoteView: View {
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
-
+            
             Section("Your Quote") {
                 TextField("Timeframe (e.g., 'This weekend')", text: $timeframe)
                 TextField("Materials Needed", text: $materials)
                 TextField("Restrictions (e.g., 'After 6 PM')", text: $restrictions)
                 TextField("Reward for Completing (e.g., 'Dinner at favorite restaurant')", text: $reward)
             }
-
+            
             Button(isEditing ? "Resubmit Edited Quote" : "Submit Quote") {
                 // Ensure all fields are filled before submitting
                 if !timeframe.isEmpty && !materials.isEmpty && !restrictions.isEmpty && !reward.isEmpty {
@@ -49,3 +49,11 @@ struct CreateQuoteView: View {
                 }
             }
             // Disable the button if any required fields are
+            .disabled(timeframe.isEmpty || materials.isEmpty || restrictions.isEmpty || reward.isEmpty)
+                    .alert("Quote Submitted!", isPresented: $showingConfirmationAlert) {
+                        Button("OK", role: .cancel) { dismiss() }
+                    } message: {
+                        Text(isEditing ? "Your edited quote has been resubmitted for review." : "Your quote has been submitted for review.")
+                    }
+                } // Closing brace for the Form
+            } // Closing brace for the CreateQuoteView struct

@@ -10,7 +10,7 @@ import SwiftUI
 struct AssignedTasksView: View {
     @EnvironmentObject var appDataStore: AppDataStore
 
-    var body: some some View {
+    var body: some View {
         NavigationView {
             List {
                 ForEach(appDataStore.tasks.filter {
