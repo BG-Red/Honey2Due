@@ -35,7 +35,8 @@ struct TaskDetailView: View {
         .sheet(isPresented: $showingEditQuoteSheet) {
             CreateQuoteView(task: currentTask, isEditing: true)
         }
-        .onChange(of: appDataStore.tasks) { newTasks in
+        // Updated onChange syntax
+        .onChange(of: appDataStore.tasks) { oldTasks, newTasks in
             if let updated = newTasks.first(where: { $0.id == task.id }) {
                 task = updated
                 // Ensure selectedStatus reflects the actual task status when the view appears or task updates
@@ -97,6 +98,42 @@ struct TaskDetailView: View {
                 Text("Current Quote")
                     .font(.title2)
                     .fontWeight(.semibold)
+                    .padding(.bottom, 5) // Add some spacing below the title
+
+                // MARK: Task Request Details within Quote Section
+                // Display key task details for context within the quote section
+                Text("Request Details")
+                    .font(.headline)
+                    .foregroundColor(.primary)
+
+                Text(currentTask.title) // Task Title
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+
+                Text(currentTask.description) // Task Description
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .padding(.bottom, 5)
+
+                if let startDate = currentTask.requestedStartDate {
+                    QuoteDetailRow(label: "Requested Start", value: startDate.formatted(date: .numeric, time: .omitted)) // Requested Start Date
+                }
+                if let completionDate = currentTask.completionDate {
+                    QuoteDetailRow(label: "Target Completion", value: completionDate.formatted(date: .numeric, time: .omitted)) // Target Completion Date
+                }
+                QuoteDetailRow(label: "Priority", value: currentTask.priority.rawValue) // Priority
+
+                if let requestedReward = currentTask.requestedReward, !requestedReward.isEmpty {
+                    QuoteDetailRow(label: "Requested Reward", value: requestedReward) // Requested Reward
+                }
+
+                Divider() // Separator before quote details
+                    .padding(.vertical, 5)
+
+                // MARK: Quote Details
+                Text("Quote Details")
+                    .font(.headline)
+                    .foregroundColor(.primary)
 
                 QuoteDetailRow(label: "Timeframe", value: quote.timeframe)
                 QuoteDetailRow(label: "Materials", value: quote.materials)
@@ -129,7 +166,8 @@ struct TaskDetailView: View {
                         }
                     }
                     .pickerStyle(.menu)
-                    .onChange(of: selectedStatus) { newStatus in
+                    // Updated onChange syntax for selectedStatus
+                    .onChange(of: selectedStatus) { oldStatus, newStatus in
                         appDataStore.updateTaskStatus(for: currentTask, newStatus: newStatus)
                     }
                     .padding(.top, 10)

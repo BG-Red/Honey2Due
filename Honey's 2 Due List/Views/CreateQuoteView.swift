@@ -10,31 +10,45 @@ import SwiftUI
 struct CreateQuoteView: View {
     @EnvironmentObject var appDataStore: AppDataStore
     @Environment(\.dismiss) var dismiss // To dismiss the sheet/navigation after submission
-    
+
     var task: Task // The task for which the quote is being created/edited
     var isEditing: Bool // A flag to know if we're in "edit existing quote" mode
-    
+
     @State private var timeframe: String = ""
     @State private var materials: String = ""
     @State private var restrictions: String = ""
     @State private var reward: String = ""
     @State private var showingConfirmationAlert = false // To show an alert after submitting
-    
+
     var body: some View {
         Form { // Using a Form for structured input fields
             Section("Task: \(task.title)") {
                 Text(task.description)
                     .font(.caption)
                     .foregroundColor(.secondary)
+                    .padding(.bottom, 5) // Add some spacing
+
+                // MARK: Added Request Details
+                if let startDate = task.requestedStartDate {
+                    QuoteDetailRow(label: "Requested Start", value: startDate.formatted(date: .numeric, time: .omitted))
+                }
+                if let completionDate = task.completionDate {
+                    QuoteDetailRow(label: "Target Completion", value: completionDate.formatted(date: .numeric, time: .omitted))
+                }
+                QuoteDetailRow(label: "Priority", value: task.priority.rawValue)
+
+                if let requestedReward = task.requestedReward, !requestedReward.isEmpty {
+                    QuoteDetailRow(label: "Requested Reward", value: requestedReward)
+                }
             }
-            
+
             Section("Your Quote") {
                 TextField("Timeframe (e.g., 'This weekend')", text: $timeframe)
                 TextField("Materials Needed", text: $materials)
                 TextField("Restrictions (e.g., 'After 6 PM')", text: $restrictions)
                 TextField("Reward for Completing (e.g., 'Dinner at favorite restaurant')", text: $reward)
             }
-            
+
             Button(isEditing ? "Resubmit Edited Quote" : "Submit Quote") {
                 // Ensure all fields are filled before submitting
                 if !timeframe.isEmpty && !materials.isEmpty && !restrictions.isEmpty && !reward.isEmpty {
