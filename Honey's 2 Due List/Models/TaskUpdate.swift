@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TaskUpdate: Identifiable, Codable {
+struct TaskUpdate: Identifiable, Codable, Equatable {
     let id: UUID
     let taskId: UUID
     let userId: UUID // The person who posted the update

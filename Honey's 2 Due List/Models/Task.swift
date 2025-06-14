@@ -10,7 +10,7 @@ import Foundation
 // Note: TaskStatus enum is now typically in Enums.swift
 // Make sure TaskStatus and Priority are accessible (e.g., from Enums.swift if you've put them there)
 
-struct Task: Identifiable, Codable {
+struct Task: Identifiable, Codable, Equatable { // <--- Add Equatable here
     let id: UUID
     var title: String
     var description: String
@@ -23,11 +23,11 @@ struct Task: Identifiable, Codable {
     var currentQuote: Quote?
 
     // New properties for the task request:
-    var requestedStartDate: Date? // <--- NEW
-    var completionDate: Date?     // <--- NEW
-    var priority: Priority      // <--- NEW
-    var requestedReward: String?  // <--- NEW - Added as optional string for initial request
-
+    var requestedStartDate: Date?
+    var completionDate: Date?
+    var priority: Priority
+    var requestedReward: String?
+    
     init(id: UUID = UUID(),
          title: String,
          description: String,

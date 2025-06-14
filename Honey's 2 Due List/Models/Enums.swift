@@ -31,7 +31,7 @@ public enum QuoteStatus: String, Codable, CaseIterable, Identifiable {
     public var id: String { self.rawValue } // For Identifiable
 }
 
-public enum Priority: String, Codable, CaseIterable, Identifiable { // <--- Add this new enum
+public enum Priority: String, Codable, CaseIterable, Identifiable, Hashable { // <--- Add this new enum
     case low = "Low"
     case medium = "Medium"
     case high = "High"

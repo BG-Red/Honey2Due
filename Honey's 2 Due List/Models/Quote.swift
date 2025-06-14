@@ -16,7 +16,7 @@ import Foundation
     var id: String { self.rawValue }
 } */
 
-struct Quote: Identifiable, Codable {
+struct Quote: Identifiable, Codable, Equatable {
     let id: UUID
     let taskId: UUID
     let submittedByUserId: UUID
