@@ -38,7 +38,13 @@ struct TaskDetailView: View {
         .onChange(of: appDataStore.tasks) { newTasks in
             if let updated = newTasks.first(where: { $0.id == task.id }) {
                 task = updated
+                // Ensure selectedStatus reflects the actual task status when the view appears or task updates
+                selectedStatus = updated.status
             }
+        }
+        .onAppear {
+            // Set the initial value of selectedStatus when the view appears
+            selectedStatus = currentTask.status
         }
     }
 
@@ -52,7 +58,7 @@ struct TaskDetailView: View {
             Text("Status: \(currentTask.status.rawValue)")
                 .font(.headline)
                 .foregroundColor(.primary)
-            Text("Submitted by: \(appDataStore.currentUser.id == currentTask.submittedByUserId ? "You" : (currentTask.submittedByUserId == User.personA.id ? User.personA.name : User.personB.name))")
+            Text("Submitted by: \(appDataStore.getUserName(for: currentTask.submittedByUserId))")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             Text("Description:")
@@ -126,9 +132,6 @@ struct TaskDetailView: View {
                     .onChange(of: selectedStatus) { newStatus in
                         appDataStore.updateTaskStatus(for: currentTask, newStatus: newStatus)
                     }
-                    .onAppear {
-                        selectedStatus = currentTask.status
-                    }
                     .padding(.top, 10)
                 }
             }
@@ -142,7 +145,8 @@ struct TaskDetailView: View {
                 .font(.title2)
                 .fontWeight(.semibold)
 
-            ForEach(currentTask.updates.sorted(by: { $0.timestamp > $1.timestamp }), id: \.id) { update in
+            // Ensure updates is not nil and sorted
+            ForEach(currentTask.updates.sorted(by: { $0.timestamp > $1.timestamp })) { update in
                 VStack(alignment: .leading) {
                     Text(update.message)
                         .font(.body)
@@ -165,15 +169,5 @@ struct TaskDetailView: View {
             .buttonStyle(.borderedProminent)
             .disabled(updateMessage.isEmpty)
         }
-    }
-
-    // Helper to get user name if not implemented in AppDataStore
-    private func getUserName(for userId: UUID) -> String {
-        if userId == User.personA.id {
-            return User.personA.name
-        } else if userId == User.personB.id {
-            return User.personB.name
-        }
-        return "Unknown User"
     }
 }

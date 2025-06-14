@@ -107,6 +107,24 @@ class AppDataStore: ObservableObject {
         print("Update added by \(currentUser.name) for task \(task.title): \(message)")
     }
 
+    // New function to update task status
+    func updateTaskStatus(for task: Task, newStatus: TaskStatus) {
+        guard let index = tasks.firstIndex(where: { $0.id == task.id }) else { return }
+        tasks[index].status = newStatus
+        tasks[index].updatedAt = Date()
+        print("Task '\(task.title)' status updated to \(newStatus.rawValue) by \(currentUser.name)")
+    }
+
+    // Helper to get user name if not implemented in AppDataStore
+    func getUserName(for userId: UUID) -> String {
+        if userId == User.personA.id {
+            return User.personA.name
+        } else if userId == User.personB.id {
+            return User.personB.name
+        }
+        return "Unknown User"
+    }
+
     // Optional: Sample Data for Testing
     /*
     private func loadSampleData() {
