@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SubmittedTasksView: View {
+struct SubmittedTaskView: View {
     @EnvironmentObject var appDataStore: AppDataStore
 
     var body: some View {
@@ -42,6 +42,6 @@ struct SubmittedTasksView: View {
 // MARK: - Preview
 // This code block allows you to see a preview of this view in Xcode's canvas
 #Preview {
-    SubmittedTasksView()
+    SubmittedTaskView()
         .environmentObject(AppDataStore()) // Provide a dummy AppDataStore for the preview
 }

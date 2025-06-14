@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum QuoteStatus: String, Codable, CaseIterable, Identifiable {
+/* enum QuoteStatus: String, Codable, CaseIterable, Identifiable {
     case pendingReview = "Pending Review"
     case approved = "Approved"
     case rejected = "Rejected"
     case editedAndResubmitted = "Edited & Resubmitted"
 
     var id: String { self.rawValue }
-}
+} */
 
 struct Quote: Identifiable, Codable {
     let id: UUID

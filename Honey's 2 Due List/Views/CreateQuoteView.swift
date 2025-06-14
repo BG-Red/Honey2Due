@@ -10,16 +10,16 @@ import SwiftUI
 struct CreateQuoteView: View {
     @EnvironmentObject var appDataStore: AppDataStore
     @Environment(\.dismiss) var dismiss // To dismiss the sheet/navigation after submission
-
+    
     var task: Task // The task for which the quote is being created/edited
     var isEditing: Bool // A flag to know if we're in "edit existing quote" mode
-
+    
     @State private var timeframe: String = ""
     @State private var materials: String = ""
     @State private var restrictions: String = ""
     @State private var reward: String = ""
     @State private var showingConfirmationAlert = false // To show an alert after submitting
-
+    
     var body: some View {
         Form { // Using a Form for structured input fields
             Section("Task: \(task.title)") {
@@ -50,10 +50,11 @@ struct CreateQuoteView: View {
             }
             // Disable the button if any required fields are
             .disabled(timeframe.isEmpty || materials.isEmpty || restrictions.isEmpty || reward.isEmpty)
-                    .alert("Quote Submitted!", isPresented: $showingConfirmationAlert) {
-                        Button("OK", role: .cancel) { dismiss() }
-                    } message: {
-                        Text(isEditing ? "Your edited quote has been resubmitted for review." : "Your quote has been submitted for review.")
-                    }
-                } // Closing brace for the Form
-            } // Closing brace for the CreateQuoteView struct
+            .alert("Quote Submitted!", isPresented: $showingConfirmationAlert) {
+                Button("OK", role: .cancel) { dismiss() }
+            } message: {
+                Text(isEditing ? "Your edited quote has been resubmitted for review." : "Your quote has been submitted for review.")
+            }
+        } // Closing brace for the Form
+    } // Closing brace for the CreateQuoteView struct
+}

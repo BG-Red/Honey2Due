@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AssignedTasksView: View {
+struct AssignedTaskView: View {
     @EnvironmentObject var appDataStore: AppDataStore
 
     var body: some View {
@@ -45,6 +45,6 @@ struct AssignedTasksView: View {
 
 // MARK: - Preview
 #Preview {
-    AssignedTasksView()
+    AssignedTaskView()
         .environmentObject(AppDataStore())
 }

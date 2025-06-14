@@ -19,7 +19,7 @@ public enum TaskStatus: String, Codable, CaseIterable, Identifiable {
     case completed = "Completed"
     case cancelled = "Cancelled"
 
-    var id: String { self.rawValue } // For Identifiable
+    public var id: String { self.rawValue } // For Identifiable
 }
 
 public enum QuoteStatus: String, Codable, CaseIterable, Identifiable {
@@ -28,5 +28,14 @@ public enum QuoteStatus: String, Codable, CaseIterable, Identifiable {
     case rejected = "Rejected"
     case editedAndResubmitted = "Edited & Resubmitted"
 
-    var id: String { self.rawValue } // For Identifiable
+    public var id: String { self.rawValue } // For Identifiable
+}
+
+public enum Priority: String, Codable, CaseIterable, Identifiable { // <--- Add this new enum
+    case low = "Low"
+    case medium = "Medium"
+    case high = "High"
+    case urgent = "Urgent"
+
+    public var id: String { self.rawValue }
 }
