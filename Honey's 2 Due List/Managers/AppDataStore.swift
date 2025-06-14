@@ -9,7 +9,7 @@ class AppDataStore: ObservableObject {
         // Initialize with a default user for testing
         // In a real app, this would be set after login.
         self.currentUser = .personA // Start as Person A for submission
-        loadSampleData()
+        //loadSampleData()
     }
 
     // MARK: - User Management (Simplified for this example)
@@ -86,7 +86,7 @@ class AppDataStore: ObservableObject {
 
     // MARK: - Sample Data for Testing
 
-    private func loadSampleData() {
+/*    private func loadSampleData() {
         let task1 = Task(title: "Fix leaky faucet", description: "The kitchen faucet has a slow drip. Need to replace the washer.", submittedByUserId: .personA.id)
         var task2 = Task(title: "Organize garage", description: "It's a disaster! Everything needs a place.", submittedByUserId: .personA.id)
         var quote2 = Quote(taskId: task2.id, submittedByUserId: .personB.id, timeframe: "This weekend (Saturday afternoon)", materials: "Storage bins, labels", restrictions: "Must be done before dinner", reward: "Your favorite homemade cookies!")
@@ -106,7 +106,7 @@ class AppDataStore: ObservableObject {
         addUpdate(to: tasks[2], message: "Bought the wood today!")
         addUpdate(to: tasks[2], message: "Started cutting pieces, almost done.")
         addUpdate(to: tasks[2], message: "Need to get some specific screws tomorrow.")
-    }
+    } */
 }
 //  AppDataStore.swift
 //  Honey's 2 Due List
